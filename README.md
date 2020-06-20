@@ -71,7 +71,7 @@ In the demo script, a unipolar binary code sequence with total bit number `Nu` =
 
 # Results
 * In the comand windom, the values of noise scaling factor `Q`, coding gain `Gc`, ratio of coding gain to  standard reference coding gain `Gc/Gr` will be printed if a code sequence with smaller noise scaling factor `Q` is searched:   
-![图片alt]()
+![image](https://github.com/sunxizi16/DGA/blob/master/result1.png)
         
       
        
