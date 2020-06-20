@@ -9,7 +9,7 @@
 - [Citation](#citation)
 
 # Overview
-Distributed genetic algorithm (DGA) is a MATLAB script that contains all the required functions to search an optimal/sub-optimal unipolar binary code sequence offering the largest possible coding gain, here called genetic-optimised code (GO-code). In this script, a set of input parameters is adjustable, among them the energy enhancement factor `F_E` can be modified to search the GO-code with arbitrary length. Parameters setting of DGA are fixed (see Section Parameters) and efficient in the search of optimal GO-code thanks to the robustness of DGA. Additionally, in the demo, we provide a decaying trend to code sequence envelop to simulate the EDFA gain saturation. In practical systems, this decaying trend is determined by the specifications of EDFA and can be estimated by the measured coding sequence.
+Distributed genetic algorithm (DGA) is a MATLAB script that contains all the required functions to search an optimal/sub-optimal unipolar binary code sequence offering the largest possible coding gain, here called genetic-optimised code (GO-code). In this script, a set of input parameters is adjustable, among them the energy enhancement factor `F_E` can be modified to search the GO-code with arbitrary length. Parameters setting of DGA are fixed (see Section Input Parameters) and efficient in the search of optimal GO-code thanks to the robustness of DGA. Additionally, in the demo, we provide a decaying trend to code sequence envelop to simulate the EDFA gain saturation. In practical systems, this decaying trend is determined by the specifications of EDFA and can be estimated by the measured coding sequence.
 
 # System Requirements
 
@@ -57,7 +57,6 @@ In the demo script, a unipolar binary code sequence with total bit number `Nu` =
 
         F_E=40;   
         m=3;      
-        Nu=m*F_E;
     
 
 * The decaying trend, here it is simulated using an exponential function:
@@ -70,12 +69,19 @@ In the demo script, a unipolar binary code sequence with total bit number `Nu` =
         run('Demo.m');
 
 # Results
-* In the comand windom, the values of noise scaling factor `Q`, coding gain `Gc`, ratio of coding gain to  standard reference coding gain `Gc/Gr` will be printed if a code sequence with smaller noise scaling factor `Q` is searched:   
-![image](https://github.com/sunxizi16/DGA/blob/master/result1.png)
-        
-      
-       
-    
+A result computed by the demo script is uploaded. Users can check this result by the following command: 
+ 
+    load('Nu=120, F_E=41.3428, Gc=4.1885.mat');
+* In the data sets, `ubest` is the searched best code sequence.
+
+* During the searching process, the values of noise scaling factor `Q`, coding gain `Gc`, ratio of coding gain to standard reference coding gain `Gc/Gr` will be printed in the comand windom if a code sequence with smaller noise scaling factor `Q` is searched:   
+![image](https://github.com/sunxizi16/DGA/blob/master/result1.png)      
+The last row shows `Q`, `Gc` and `Gc/Gr` of the searched best code sequence.
+
+* When the search completes, the `Gc` distribtion of last subpopulation will be figured:   
+![image](https://github.com/sunxizi16/DGA/blob/master/result2.jpg)    
+* The upload result is computed in 124 mimutes on a computer with the recommended specs. 
+* Note that due to the random initialization and genetic operation, a different best code sequence is likely to be searched each time users run the same script, but all the searched code sequence can offer a coding gain approaching the standard reference coding gain.
 
 # Citation
 If you use this algorithm for your research, please cite the following papers:
