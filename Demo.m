@@ -102,12 +102,12 @@ while counter<=mu
     end
     
 end
-
 time=toc;%Computing time, unit: second
+ubest
 
 %% Save data
-Filen=['Nu=',num2str(Nu),', F_E=', num2str(F_E1),', Gc=',num2str(sqrt(F_E/2)/Ymin),'.mat'];
-save(Filen,'-mat');
+File=['ubest_Nu=',num2str(Nu),', F_E=', num2str(F_E1),', Gc=',num2str(sqrt(F_E/2)/Ymin),'.mat'];
+save(File,'-mat','ubest');
 
 %% Plot figure
 % Blue bars present coding gain distribtion of last subpopulation.
