@@ -67,22 +67,29 @@ In the demo script, a unipolar binary code sequence with total bit number `Nu` =
 * Input the following command to run the demo script:
 
         run('Demo.m');
+* The algorithm terminates when the counter value reaches `mu` and the final solution of code sequence `ubest` is saved naming as the following format:     
+        
+        ubest_Nu=  , F_E=  , Gc=  .mat 
+where `Nu`, `F_E` and `Gc` are total bit number, energy enhancement factor and coding gain of `ubest`, respectively.
 
 # Results
-A result computed by the demo script is uploaded. Users can check this result by the following command: 
+Note that due to the random initialization and genetic operation, a different best code sequence is likely to be searched each time users run the same script, but all the searched code sequence can offer a coding gain approaching the standard reference coding gain. Here we upload a coding sequence computed by the demo script. Users can check this sequence by the following command: 
  
-    load('Nu=120, F_E=41.3428, Gc=4.1885.mat');
-* In the data sets, `ubest` is the searched best code sequence.
+    load('ubest_Nu=120, F_E=41.3428, Gc=4.1885.mat');
 
 * During the searching process, the values of noise scaling factor `Q`, coding gain `Gc`, ratio of coding gain to standard reference coding gain `Gc/Gr` will be printed in the comand windom if a code sequence with smaller noise scaling factor `Q` is searched:   
 ![image](https://github.com/sunxizi16/DGA/blob/master/result1.png)      
 The last row shows `Q`, `Gc` and `Gc/Gr` of the searched best code sequence.
 
+* When the search completes, the searched best code sequence `ubest` will be printed in the comand windom:   
+![image](https://github.com/sunxizi16/DGA/blob/master/result3.jpg) 
+
 * When the search completes, the `Gc` distribtion of last subpopulation will be figured:   
-![image](https://github.com/sunxizi16/DGA/blob/master/result2.jpg)    
+![image](https://github.com/sunxizi16/DGA/blob/master/result2.jpg) 
+   
 * The upload result is computed in 124 mimutes on a computer with the recommended specs. 
-* Note that due to the random initialization and genetic operation, a different best code sequence is likely to be searched each time users run the same script, but all the searched code sequence can offer a coding gain approaching the standard reference coding gain.
+
 
 # Citation
-If you use this algorithm for your research, please cite the following papers:
+If you use this algorithm for your research, please cite the following paper:
 
