@@ -82,7 +82,7 @@ Note that due to the random initialization and genetic operation, a different be
 The last row shows `Q`, `Gc` and `Gc/Gr` of the searched best code sequence.
 
 * When the search completes, the searched best code sequence `ubest` will be printed in the comand windom:   
-![image](https://github.com/sunxizi16/DGA/blob/master/result3.jpg) 
+![image](https://github.com/sunxizi16/DGA/blob/master/result3.jpg.png) 
 
 * When the search completes, the `Gc` distribtion of last subpopulation will be figured:   
 ![image](https://github.com/sunxizi16/DGA/blob/master/result2.jpg) 
